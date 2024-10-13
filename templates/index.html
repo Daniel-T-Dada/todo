@@ -33,7 +33,9 @@
                 <!-- List of all the tasks for the day -->
                 {% for task in tasks %}
                 <div class="card m-1">
+                    
                     <div class="card-body">
+                        {{ forloop.counter}}.
                         {{ task.task }}
                         <span style="position: relative; float: right;">
                             <a href="{% url 'mark_as_done' task.pk %}" class="btn btn-success"><i
